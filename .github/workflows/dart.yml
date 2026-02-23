@@ -1,8 +1,3 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
 name: Build and Deploy Android
 
 on:
@@ -13,6 +8,9 @@ on:
 jobs:
   build-and-deploy-android:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # 🔥 necesario para poder hacer push
 
     steps:
       - name: Checkout repository
@@ -36,19 +34,14 @@ jobs:
       - name: Build APK (release)
         run: flutter build apk --release
 
-      - name: Package APK
-        run: |
-          mkdir -p out
-          cp build/app/outputs/flutter-apk/app-release.apk out/ || true
-
       - name: Deploy Android build
         run: |
-          git clone https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/DemetrioGarcia/DespliegueAndroid.git mobile-repo
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/DemetrioGarcia/DespliegueAndroid.git mobile-repo
           rm -rf mobile-repo/*
-          cp out/app-release.apk mobile-repo/ || true
+          cp build/app/outputs/flutter-apk/app-release.apk mobile-repo/ || true
           cd mobile-repo
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Deploy Android build" || echo "No changes to commit"
+          git commit -m "Deploy Android build ${{ github.run_number }}" || echo "No changes to commit"
           git push origin main
