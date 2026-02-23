@@ -43,7 +43,7 @@ jobs:
 
       - name: Deploy Android build
         run: |
-          git clone https://x-access-token:${{ secrets.ACCESS_TOKEN }}@github.com/DemetrioGarcia/DespliegueAndroid mobile-repo
+          git clone https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/DemetrioGarcia/DespliegueAndroid.git mobile-repo
           rm -rf mobile-repo/*
           cp out/app-release.apk mobile-repo/ || true
           cd mobile-repo
