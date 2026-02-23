@@ -9,9 +9,6 @@ jobs:
   build-and-deploy-android:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write   # 🔥 necesario para poder hacer push
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,7 +33,7 @@ jobs:
 
       - name: Deploy Android build
         run: |
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/DemetrioGarcia/DespliegueAndroid.git mobile-repo
+          git clone https://x-access-token:${{ secrets.DEPLOY_TOKEN }}@github.com/DemetrioGarcia/DespliegueAndroid.git mobile-repo
           rm -rf mobile-repo/*
           cp build/app/outputs/flutter-apk/app-release.apk mobile-repo/ || true
           cd mobile-repo
