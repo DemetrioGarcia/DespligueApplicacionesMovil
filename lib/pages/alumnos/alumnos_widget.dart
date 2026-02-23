@@ -209,7 +209,7 @@ class _AlumnosWidgetState extends State<AlumnosWidget> {
                                         Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 5.0, 0.0, 5.0),
+                                                  1.0, 5.0, 0.0, 5.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
