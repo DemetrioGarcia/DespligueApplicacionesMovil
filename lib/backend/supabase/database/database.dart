@@ -5,6 +5,13 @@ export '../supabase.dart';
 export 'row.dart';
 export 'table.dart';
 
-export 'tables/alumnos.dart';
-export 'tables/alum_asignatura.dart';
-export 'tables/asignatura.dart';
+export 'tables/album_ratings.dart';
+export 'tables/albums.dart';
+export 'tables/artists.dart';
+export 'tables/favorites.dart';
+export 'tables/review_votes.dart';
+export 'tables/reviews.dart';
+export 'tables/reviews_full.dart';
+export 'tables/song_ratings.dart';
+export 'tables/tracks.dart';
+export 'tables/users.dart';

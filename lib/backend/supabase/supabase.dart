@@ -1,11 +1,10 @@
 import 'package:supabase_flutter/supabase_flutter.dart' hide Provider;
-import '/flutter_flow/flutter_flow_util.dart';
 
 export 'database/database.dart';
 
-String _kSupabaseUrl = 'https://ltqjyiefnfgqsinqjxod.supabase.co';
+String _kSupabaseUrl = 'https://ebgjcymwnpuobubhdajl.supabase.co';
 String _kSupabaseAnonKey =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx0cWp5aWVmbmZncXNpbnFqeG9kIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5ODI0MDMsImV4cCI6MjA4MzU1ODQwM30.HTKUMPnY8aUuhcLHnrtLIJu3a8_nl8DlV8cH9x7j01Q';
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImViZ2pjeW13bnB1b2J1YmhkYWpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIxMjAwNDUsImV4cCI6MjA4NzY5NjA0NX0.PNMfHn46fp57XGJZwpVyjRI_0uQKa-5-Wz4gzx4_eCc';
 
 class SupaFlow {
   SupaFlow._();

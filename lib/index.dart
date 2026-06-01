@@ -1,9 +1,9 @@
 // Export pages
-export '/pages/alumnos/alumnos_widget.dart' show AlumnosWidget;
-export '/pages/asignaturas/asignaturas_widget.dart' show AsignaturasWidget;
-export '/pages/crear_alumno/crear_alumno_widget.dart' show CrearAlumnoWidget;
-export '/pages/crear_asignatura/crear_asignatura_widget.dart'
-    show CrearAsignaturaWidget;
-export '/pages/editar_alumno/editar_alumno_widget.dart' show EditarAlumnoWidget;
-export '/pages/editar_asignatura/editar_asignatura_widget.dart'
-    show EditarAsignaturaWidget;
+export '/pages/login/login_widget.dart' show LoginWidget;
+export '/pages/registro/registro_widget.dart' show RegistroWidget;
+export '/pages/home/home_widget.dart' show HomeWidget;
+export '/pages/user_config/user_config_widget.dart' show UserConfigWidget;
+export '/pages/album/album_widget.dart' show AlbumWidget;
+export '/reset_password_page/reset_password_page_widget.dart'
+    show ResetPasswordPageWidget;
+export '/pages/cancion/cancion_widget.dart' show CancionWidget;

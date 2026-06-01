@@ -1,4 +1,4 @@
-package com.mycompany.despligueapps
+package com.mycompany.nuevoproyecto
 
 import io.flutter.embedding.android.FlutterActivity
 
